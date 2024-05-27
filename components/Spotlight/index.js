@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Spotlight({ image, artist, height, width }) {
+export default function Spotlight({ image, name, artist, height, width }) {
   return (
     <>
       <Image
@@ -8,7 +8,7 @@ export default function Spotlight({ image, artist, height, width }) {
         height={height * 0.3}
         width={width * 0.3}
         // layout="responsive"
-        alt="a random art-image"
+        alt={name}
       />
       <p>
         This piece of art was created by <b>{artist}</b>

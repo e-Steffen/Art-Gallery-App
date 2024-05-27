@@ -1,13 +1,6 @@
-
 import Spotlight from "@/components/Spotlight";
 
-
-
-
-
-export default function SpotlightPage({pieces}) {
- 
-
+export default function SpotlightPage({ pieces }) {
   function randomIndex(pieces) {
     return pieces[Math.floor(Math.random() * pieces.length)];
   }
@@ -16,8 +9,8 @@ export default function SpotlightPage({pieces}) {
 
   return (
     <>
-
       <Spotlight
+        name={randomPiece.name}
         image={randomPiece.imageSource}
         artist={randomPiece.artist}
         width={randomPiece.dimensions.width}
@@ -25,5 +18,4 @@ export default function SpotlightPage({pieces}) {
       />
     </>
   );
-
 }
