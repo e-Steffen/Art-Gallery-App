@@ -1,6 +1,5 @@
-import ArtPieces from "@/components/ArtPieces"
+import ArtPieces from "@/components/ArtPieces";
 
-export default function RenderArtPieces() {
-
-    return ( <ArtPieces pieces={pieces}></ArtPieces>)
+export default function RenderArtPieces({ pieces }) {
+  return <ArtPieces pieces={pieces}></ArtPieces>;
 }
