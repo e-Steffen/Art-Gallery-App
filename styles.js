@@ -11,4 +11,8 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
   }
+
+  p {
+    font-size: 1.2rem;
+  }
 `;
