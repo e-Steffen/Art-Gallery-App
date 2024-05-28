@@ -1,9 +1,8 @@
 import Image from "next/image";
 import styled from "styled-components";
+import FavoriteButton from "../FavoriteButton";
 
 export default function ArtPiecePreview({ image, title, artist }) {
-  console.log(image);
-
   return (
     <article Classname="ArtpiecePreview__article">
       <Image

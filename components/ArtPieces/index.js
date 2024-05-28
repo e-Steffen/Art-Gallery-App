@@ -2,19 +2,25 @@ import styled from "styled-components";
 import Link from "next/link";
 
 import ArtPiecePreview from "../ArtpiecePreview";
+import FavoriteButton from "../FavoriteButton";
 
-export default function ArtPieces({ pieces }) {
-  console.log(pieces);
-
+export default function ArtPieces({ pieces, onToggleFavorite, isFavorite }) {
   return (
     <StyledUl>
       {pieces.map((piece) => (
         <StyledListItem key={piece.slug}>
+          <FavoriteButton
+            onToggleFavorite={onToggleFavorite}
+            slug={piece.slug}
+            isFavorite={isFavorite}
+          />
           <Link href={`/art-pieces/${piece.slug}`}>
             <ArtPiecePreview
               image={piece.imageSource}
               title={piece.name}
               artist={piece.artist}
+              onToggleFavorite={onToggleFavorite}
+              slug={piece.slug}
             />
           </Link>
         </StyledListItem>
